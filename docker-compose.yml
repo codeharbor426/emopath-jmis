@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  emopath:
+    build: .
+    container_name: emopath-container
+    working_dir: /app
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    tty: true
